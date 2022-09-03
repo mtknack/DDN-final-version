@@ -1,0 +1,131 @@
+/* .color1 { #1a0c12 };
+.color2 { #f70a71 };
+.color3 { #ffdaa6 };
+.color4 { #ffb145 };
+.color5 { #74ab90 }; */
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1a0c12;
+}
+
+h1{
+    font-family: Miss;
+    font-size: 400%;
+    text-align: center;
+    color: #1a0c12;
+}
+h3{
+    margin: 1%;
+    color: #1a0c12;
+}
+p{
+    text-indent: 4%;
+    font-family: Miss;
+    font-size: 220%;
+    text-align: justify;
+    word-spacing: 10px;
+    margin: 0% 10% 0 10%;
+    padding: 4px 0;
+    color: #1a0c12;
+}
+
+.folha{
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: #ffdaa6;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.folha::before{
+    content: "";
+    position: absolute;
+    top: -0.5%;
+    left: -0.5%;
+    width: 101%;
+    height: 101%;
+    border-radius: 10px;
+    background: linear-gradient(rgb(0, 128, 255),#fff200, #ff0000);
+    z-index: -1;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg) brightness(100%) blur(10px);
+    }
+    100%{
+        filter: hue-rotate(360deg) brightness(100%) blur(10px);
+    }
+}
+
+
+footer{
+    width: 80%;
+    display: flex;
+}
+h2{
+    color: #1a0c12;
+    width: 80%;
+    font-family: Miss;
+    font-size: 300%;
+    text-align: center;
+}
+hr{
+    margin: 0 10%;
+    border-top: 1px;
+    border-color: #1a0c12;
+}
+.fig{
+    width: 20%;
+    display: flex;
+    position: relative;
+    justify-content: end;
+}
+.fig img{
+    width: 100px;
+    padding: 2%;
+}
+.fig img:hover{
+    width: 98px;
+    padding: 4%;
+}
+
+@font-face{
+    font-family: Miss;
+    src: url('./fontes/MissFajardose-Regular.ttf');
+}
+
+@media (max-width:700px){
+
+    p{
+        word-spacing: 5px;
+        margin: 0% 8% 0 8%;
+    }
+    .folha{
+        width: 90%;
+        margin: 5%;
+    }
+    .folha::before{
+        top: -0.1%;
+        left: -0.5%;
+        height: 100.2%;
+    }
+
+    footer{
+        width: 90%;
+        display: block;
+    }
+    h2{
+        width: 100%;
+        text-align: center;
+    }
+    .fig{
+        width: 100%;
+    }
+}
